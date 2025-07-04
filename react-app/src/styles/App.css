@@ -1,0 +1,407 @@
+.DashboardBg {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #f5f6fa 0%, #e3eafc 100%);
+  padding-top: 64px;
+}
+
+.TopBar {
+  width: 100%;
+  background: linear-gradient(90deg, #1976d2 0%, #42a5f5 100%);
+  color: white;
+  height: 48px;
+  min-height: 48px;
+  max-height: 48px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.10);
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  transition: background 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px;
+}
+
+.Logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 24px;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+}
+
+.NavBarCenter {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.NavBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background: transparent;
+  margin: 0;
+  z-index: 900;
+  height: 44px;
+}
+
+.NavBtn {
+  background: #fff;
+  color: #1976d2;
+  border: 2px solid #1976d2;
+  border-radius: 8px;
+  padding: 4px 14px;
+  font-size: 0.98rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.06);
+  height: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.NavBtn:hover, .NavBtn:focus {
+  background: #1976d2;
+  color: #fff;
+  outline: none;
+}
+
+.DashboardContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px 32px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.CardGroup {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.Card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(25, 118, 210, 0.10);
+  padding: 32px 28px 28px 28px;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.InfosCard {
+  min-width: 180px;
+  max-width: 220px;
+}
+
+.SemaineCard {
+  min-width: 320px;
+  max-width: 360px;
+}
+
+.CalendarCard {
+  width: 100%;
+  max-width: 600px;
+  min-width: 340px;
+  margin-top: 0;
+  align-self: center;
+}
+
+.CardTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1976d2;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+}
+
+.CalendarContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 48px;
+  margin-bottom: 32px;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.MainContent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 80px;
+  gap: 48px;
+}
+
+.InfosBloc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.SemaineBloc {
+  background: #f0f0f0;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 24px 32px 28px 32px;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.SemaineTitre {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.JoursLigne {
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+  width: 100%;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.JourColonne {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 60px;
+  max-width: none;
+}
+
+.JourNom {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.Checkboxes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.CheckboxesHorizontales {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.CheckboxLabel {
+  display: flex;
+  align-items: center;
+  cursor: not-allowed;
+}
+
+.CheckboxLabel input[type="checkbox"] {
+  display: none;
+}
+
+.CustomCheckbox {
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-right: 0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  border: 2px solid #fff;
+}
+
+.Infos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.Aujourdhui {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  background: #f0f0f0;
+  border-radius: 12px;
+  padding: 10px 28px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  display: inline-block;
+}
+
+.UI {
+  font-size: 1.2rem;
+  color: #1976d2;
+  margin-bottom: 4px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 8px 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  display: inline-block;
+}
+
+.Projet {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.react-calendar {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(25, 118, 210, 0.10);
+  padding: 32px 24px 24px 24px;
+  border: none;
+  font-family: inherit;
+  font-size: 1.25rem;
+  min-width: 520px;
+  max-width: 700px;
+  width: 100%;
+}
+
+.react-calendar__month-view__days__day {
+  min-width: 48px;
+  height: 48px;
+  font-size: 1.1rem;
+}
+
+.react-calendar__tile {
+  padding: 12px 0 !important;
+}
+
+.react-calendar__tile--active {
+  background: #1976d2 !important;
+  color: #fff !important;
+  border-radius: 8px;
+}
+
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+  background: #e3f0fc !important;
+  color: #1976d2 !important;
+  border-radius: 8px;
+}
+
+.SemaineLimitee {
+  max-width: 340px;
+  margin: 0 auto;
+  width: 100%;
+  overflow-x: auto;
+}
+
+@media (max-width: 900px) {
+  .CardGroup {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+  .DashboardContent {
+    padding: 0 4px 24px 4px;
+  }
+  .SemaineLimitee {
+    max-width: 100vw;
+  }
+}
+
+/* Suppression du style calendrier inutile */
+/* .react-calendar, .CalendarContainer, .CalendarCard {
+  display: none !important;
+} */
+
+.CalendarContainerVisible {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 32px auto 0 auto;
+  width: 100%;
+  max-width: 700px;
+}
+
+.react-calendar {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(25, 118, 210, 0.10);
+  padding: 32px 24px 24px 24px;
+  border: none;
+  font-family: inherit;
+  font-size: 1.15rem;
+  min-width: 340px;
+  max-width: 100%;
+}
+
+.SemaineLimitee {
+  max-width: 340px;
+  margin: 0 auto;
+  width: 100%;
+  overflow-x: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 18px;
+}
+
+.JourColonne {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 60px;
+  max-width: 70px;
+}
