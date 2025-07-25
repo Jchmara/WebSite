@@ -14,7 +14,7 @@ services:
       - "5432:5432"
 
   backend:
-    build: ./WebSite/Backend/api
+    build: ./Backend/api
     environment:
       PGUSER: postgres
       PGPASSWORD: EPSI
@@ -28,7 +28,7 @@ services:
       - "5000:5000"
 
   frontend:
-    build: ./WebSite/Frontend/react-app
+    build: ./Frontend/react-app
     ports:
       - "3000:80"
     depends_on:
