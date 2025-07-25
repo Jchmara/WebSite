@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:17
+    restart: always
+    environment:
+      POSTGRES_DB: Deloitte-Planning-PROD
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: EPSI
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  backend:
+    build: ./Backend/api
+    environment:
+      PGUSER: postgres
+      PGPASSWORD: EPSI
+      PGDATABASE: Deloitte-Planning-PROD
+      PGHOST: db
+      PGPORT: 5432
+      JWT_SECRET: 21d7de4004fb5a9587e2be615d6f5f3c12356c21eb67153929320abe2f35ef53
+    depends_on:
+      - db
+    ports:
+      - "5000:5000"
+
+  frontend:
+    build: ./Frontend/react-app
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+
+volumes:
+  db_data: 
