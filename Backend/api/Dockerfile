@@ -5,7 +5,7 @@ WORKDIR /app
 
 COPY package*.json ./
 RUN apt-get update && apt-get install -y netcat-openbsd
-RUN npm install
+RUN npm ci --only=production
 
 COPY . .
 
